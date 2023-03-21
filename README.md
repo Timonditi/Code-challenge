@@ -21,7 +21,7 @@ This program accepts basic salary and benefits of an employee,calculates and out
 This program has similar setup to the one above in that i've included a html,css and JavaScript files.The HTML file has label elements that contains in put textboxes for basic salary and benefits and a button element that triggers a function calculateSalary which calculates basic salary and appropriate deductions using if else statements and finally calculates the net salary after making appropriate deductions from the basic salary and outputs to the DOM through the innerHTML property.
 
 # Author: Timothy Odongo
-   ## Contact info
+   ### Contact info
 To get in touch E-MAIL me on todongoonditi@gmail.com
 
 ## License
