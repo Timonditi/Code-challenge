@@ -1,128 +1,24 @@
 # Code-challenge
 ## Challenge 1:Student Grade Generator
 
-    //the code begins by asking for user input on marks
-      marks = prompt('Provide the Student Marks:')
+ This program that the user to input student marks. The input should be between 0 and 100.It then returns output to the html page on the grade the student has gotten.I've added a button and input element to the HTML file to assist in user interactivity.
+ ## Setup
+ This program is a simple program consist if a html,css and javascript file for interactivity.I've included some simple styling in the css file.
+In the JavaScript file i've included a function calculateGrade() into which I've added an click event from my button tag in the html file.The function includes if else statements for different grades and outputs to the page through to innerHTML property.
 
-      //the marks check if it is between 79 -100 to print 'A'
-    if (marks>=79 && marks<=100){  
-      console.log('A')
-
-      //the marks check if it is between 69 -79 to print 'B'
-    } else if (marks >=60 && marks<79){  
-      console.log('B')
-
-      //the marks check if it is between 49 -59 to print 'C'
-    } else if (marks >= 49 && marks<59) {   
-      console.log('C')
-
-      //the marks check if it is between 40 -49 to print 'D'
-    } else if(marks >=40 && marks<49){   
-      console.log('D') 
-
-      //the marks check if it less than 40 to print 'E'
-    } else if (marks <40){    
-       console.log('E')
-
-    //the marks check if it is above 100 or a none value to print 'Provide the right input'
-    }else if (marks >100 || isNaN(marks)){  
-     console.log('Provide the right input')}
-     
  ## Challenge 2: Speed Detector
  
-    // the aim is to tell if the driver has violates the speed limits
-    let speed = Number(prompt('Enter the speed of the car'))
-    let penaltyPoints = 0
+ This program takes as input the speed of a car e.g 80. If the speed is less than 70, it prints “Ok”. Otherwise, for every 5 km/s above the speed limit (70), it gives the driver one demerit point and prints the total number of demerit points.
+## Setup
+In this program I've also included standard html,css and JavaScript files and linked them to my HTML file.
+In my script.js file is as simple function speedLimitChecker() that i've linked to the button and input elements using an event that triggers on click and then outputs to the innerHTML through a div element if id resultDiv.
 
-    //the if statement checks to see if the limit is below 70 and prints OK if fulfilled.
-     if (speed < 70){
-         console.log('Ok')
-      }
-
-    //else if the speed is above 70 the penalty points are calculated with the math.floor to and divided by 5 to provide the penalty points.
-      else {
-        penaltyPoints = Math.floor((speed-70)/5)
-        console.log(`Points on speed violation: ${penaltyPoints}`)
-      }
-
-    // the if statement prints sorry mate for those who have above 12 points and will have to re-apply to get their liscence back
-
-      if (penaltyPoints>12){
-       console.log('Sorry mate, license suspended')
-      }
   
 ## Challenge 3: Net Salary Calculator
 
-    let basicSalary = Number(prompt("Enter the employee's basic salary:"));
-    let benefits = Number(prompt("Enter the employee's benefits:"));
-    let grossSalary = basicSalary + benefits;
+This program accepts basic salary and benefits of an employee,calculates and outputs the Payee Tax, NHIF, NSSF Deductions and net salary and outputs to the page.
+## Setup
+This program has similar setup to the one above in that i've included a html,css and JavaScript files.The HTML file has label elements that contains in put textboxes for basic salary and benefits and a button element that triggers a function calculateSalary which calculates basic salary and appropriate deductions using if else statements and finally calculates the net salary after making appropriate deductions from the basic salary and outputs to the DOM through the innerHTML property.
 
-      // Calculate Payee Tax
-    let payeeTax = 0;
-      if (grossSalary <= 24000) {
-        payeeTax = 0.1 * grossSalary;
-      } else if (grossSalary <= 32333) {
-        payeeTax = 2400 + 0.25 * (grossSalary - 24000);
-      } else if (grossSalary <= 42000) {
-        payeeTax = 5600 + 0.3 * (grossSalary - 32333);
-      } else if (grossSalary <= 51667) {
-      payeeTax = 8960 + 0.32 * (grossSalary - 42000);
-      } else if (grossSalary <= 61333) {
-      payeeTax = 13888 + 0.34 * (grossSalary - 51667);
-    } else if (grossSalary <= 71000) {
-      payeeTax = 19208 + 0.36 * (grossSalary - 61333);
-    } else {
-      payeeTax = 25428 + 0.37 * (grossSalary - 71000);
-    }
+
     
-
-      // Calculate NHIF Deduction
-      let nhif = 0;
-      if (grossSalary <= 5999) {
-        nhif = 150;
-      } else if (grossSalary <= 7999) {
-        nhif = 300;
-      } else if (grossSalary <= 11999) {
-        nhif = 400;
-      } else if (grossSalary <= 14999) {
-        nhif = 500;
-      } else if (grossSalary <= 19999) {
-        nhif = 600;
-      } else if (grossSalary <= 24999) {
-        nhif = 750;
-      } else if (grossSalary <= 29999) {
-        nhif = 850;
-      } else if (grossSalary <= 34999) {
-        nhif = 900;
-      } else if (grossSalary <= 39999) {
-        nhif = 950;
-      } else if (grossSalary <= 44999) {
-        nhif = 1000;
-      } else if (grossSalary <= 49999) {
-        nhif = 1100;
-      } else if (grossSalary <= 59999) {
-        nhif = 1200;
-      } else if (grossSalary <= 69999) {
-        nhif = 1300;
-      } else if (grossSalary <= 79999) {
-        nhif = 1400;
-      } else if (grossSalary <= 89999) {
-        nhif = 1500;
-      } else if (grossSalary <= 99999) {
-        nhif = 1600;
-      } else {
-        nhif = 1700;
-      }
-      
-      // Calculate NSSF Deduction
-      let nssf = 0.06 * basicSalary;
-      
-      // Calculate Net Salary
-      let netSalary = grossSalary - payeeTax - nhif - nssf;
-      
-      // Log the results to the console
-      console.log(`Gross Salary: ${grossSalary}`);
-      console.log(`Payee Tax: ${payeeTax}`);
-      console.log(`NHIF: ${nhif}`);
-      console.log(`NSSF: ${nssf}`);
-      console.log(`Net Salary: ${netSalary}`)
