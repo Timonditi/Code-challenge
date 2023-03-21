@@ -25,7 +25,7 @@ This program has similar setup to the one above in that i've included a html,css
 To get in touch E-MAIL me on todongoonditi@gmail.com
 
 ## License
-MIT License Copyright (c) 2023 Timonditi.
+ MIT License Copyright (c) 2023 Timonditi
 The source code for the lab is licensed under the MIT license, which you can find in the LICENSE.txt file.
 
 
