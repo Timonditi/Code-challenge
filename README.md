@@ -1,7 +1,7 @@
 # Code-challenge
 ## Challenge 1:Student Grade Generator
 
-   //the code begins by asking for user input on marks
+    //the code begins by asking for user input on marks
       marks = prompt('Provide the Student Marks:')
 
       //the marks check if it is between 79 -100 to print 'A'
@@ -53,7 +53,7 @@
   
 ## Challenge 3: Net Salary Calculator
 
- let basicSalary = Number(prompt("Enter the employee's basic salary:"));
+    let basicSalary = Number(prompt("Enter the employee's basic salary:"));
     let benefits = Number(prompt("Enter the employee's benefits:"));
     let grossSalary = basicSalary + benefits;
 
