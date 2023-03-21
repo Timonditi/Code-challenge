@@ -1,5 +1,5 @@
 # Code-challenge
-#Challenge 1:Student Grade Generator
+# Challenge 1:Student Grade Generator
 
  //the code begins by asking for user input on marks
   marks = prompt('Provide the Student Marks:')
@@ -28,7 +28,7 @@ if (marks>=79 && marks<=100){
 }else if (marks >100 || isNaN(marks)){  
  console.log('Provide the right input')}
  
- #Challenge 2: Speed Detector
+ # Challenge 2: Speed Detector
  
  // the aim is to tell if the driver has violates the speed limits
 let speed = Number(prompt('Enter the speed of the car'))
@@ -51,7 +51,7 @@ let penaltyPoints = 0
    console.log('Sorry mate, license suspended')
 }
   
-#Challenge 3: Net Salary Calculator
+# Challenge 3: Net Salary Calculator
 
 let basicSalary = Number(prompt("Enter the employee's basic salary:"));
 let benefits = Number(prompt("Enter the employee's benefits:"));
